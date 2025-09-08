@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Earth</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="inter">
+    <header>
+        <div class="navbar bg-[#15803D] shadow-sm md:px-15">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>About </a></li>
+                        <li><a>Gallery </a>
+                        <li><a>Plant a Tree </a></li>
+                    </ul>
+                </div>
+                <div class="text-xl text-white font-semibold">Green Earth</div>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-white">
+                    <li><a>About </a></li>
+                    <li><a>Gallery </a>
+                    <li><a>Plant a Tree </a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <button class="btn bg-[#FACC15] text-[#15803D] rounded-full">Plant a Tree</button>
+            </div>
+    </header>
+    <section class="grid pr-5 md:grid-cols-3 justify-center items-center bg-[#CFF0DC] p-4 md:p-0">
+        <div class="hidden sm:block md:col-span-1 ">
+            <img src="./assets/hero-leaf1.png" alt="">
+        </div>
+        <div class=" text-center md:col-span-1 md:space-y-4">
+            <h2 class="text-3xl font-bold">Plant a Tree, Grow a Future</h2>
+            <p class="text-sm">Join our mission to plant 1 million trees and make the Earth greener for future
+                generations.</p>
+            <button><a class="btn bg-[#FACC15] text-[#15803D] rounded-full max-md:mt-4">Get Involved</a></button>
+        </div>
+        <div class="hidden sm:block">
+            <img src="./assets/hero-leaf2.png" alt="">
+        </div>
+    </section>
+            <!-- Main Starts -->
+    <main class="mt-10">
+        <!-- Choose Your Treess -->
+       <section id="treesContainer" class="md:px-8  pt-4 bg-[#cff0dc49]">
+        <!-- loading spinner -->
+        <div id="showLoading" class="mx-auto grid grid-cols-4 max-md:grid-cols-1 md:grid-cols-12 gap-4">
+            <div id="loading-spinner" class="col-span-4 md:col-span-12 flex justify-center items-center py-10">
+                <span class="loading loading-spinner loading-lg text-primary w-25"></span>
+            </div>
+        </div>
+
+        <h2 class="text-center text-3xl font-semibold mb-4">Choose Your Trees</h2>
+        <!-- Grid -->
+        <div class=" mx-auto grid grid-cols-4 max-md:grid-cols-1 md:grid-cols-12 gap-4">
+            
+            <!-- mobile view categories-->
+        <div class="dropdown dropdown-start md:hidden mb-4">
+            <div tabindex="0" role="button" class="btn m-1 text-[16px] font-bold mb-3 bg-[#FACC15] text-[#15803D] rounded-full">Categories</div>
+                <ul id="catagories-list" tabindex="0" class="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow-sm">
+                  
+                </ul>
+        </div>
+        <!-- mobile view your cart -->
+         <div class="dropdown dropdown-end md:hidden">
+            <div tabindex="0" role="button" class="btn m-1 text-[16px] font-semibold mb-[8px] bg-[#FACC15] text-[#15803D] rounded-full">Your Cart <span id="cartCounts" class="text-green-800 font-bold">0</span></div>
+            <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box w-52 p-2 shadow-sm">
+                
+                    <div id="cardCotainers" class="flex flex-col justify-between items-center rounded-lg p-3  mb-1 ">
+                      
+                    </div>
+
+                    <div class="flex justify-between items-center p-1">
+                      <h1 class="font-semibold">Total</h1>
+                      <p ><span></span> ৳</p>
+                    </div>
+                
+            </ul>
+        </div>
+            
+          <!--desktop view Categories -->
+            <div class="col-span-1 md:col-span-2 max-md:hidden">
+                <h2 class="text-2xl font-semibold mb-5">Categories</h2>
+                <ul id="catagories-lists"  class="text-xl space-y-5">
+                  
+                </ul>
+            </div>
+            <!-- All Cards -->
+            <div id="all-cards" class="col-span-3 md:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-8 px-5 pb-14">
+               
+                        
+            </div>
+            <!--desktop view your cart-->
+            <div id="treesContainers" class="col-span-2 p-[18px] space-y-3 max-md:hidden">
+            <h1 class="text-[24px] font-semibold mb-[8px]">Your Cart</h1>
+            <div id="cartContainer" class="flex flex-col rounded-lg p-3 bg-[#ffffff]">
+                
+            </div>
+
+            <div class="flex justify-between items-center p-1">
+                <h1 class="font-semibold">Total</h1>
+                <p ><span></span> ৳</p>
+            </div>
+                
+        </div>
+        </div>
+
+        
+       
+    <script src="./index.js"></script>
+</body>
+
+</html>
