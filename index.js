@@ -71,7 +71,7 @@ const displayLoadTreeCategorie = (TreeCategories) => {
             <span><span>$</span><span>${TreeCategorie.price}</span></span>
         </div>
         <div class="text-center ">
-            <button class="btn bg-[#FACC15] text-[#15803D] rounded-full w-full">Add To Cart</button>
+            <button class="btn mt-5 text-[#ffffff] bg-[#15803D] rounded-full w-full">Add To Cart</button>
         </div>
       </div>`;
     treeCat.append(treeCatDiv);
